@@ -1,0 +1,70 @@
+$tablet: 1024px;
+$mobile-sm: 600px;
+
+.nav {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 0.5fr 4fr 2fr;
+  grid-template-areas: 'logo links busca icones';
+  height: 80px;
+  padding: 0 50px;
+  width: 100vw;
+  z-index: 1;
+  box-shadow: inset 0 -1px 0 #dcdcdc;
+
+  @media(max-width: $tablet) {
+    grid-template-areas:
+      'logo logo'
+      'links icones'
+      'busca busca';
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 200px;
+    justify-items: center;
+  }
+  
+  @media(max-width: $mobile-sm) {
+    padding: 0 50px;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  grid-area: logo;
+  color: red;
+  font-weight: bold;
+}
+
+.links {
+  grid-area: links;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  @media(max-width: $tablet) {
+    justify-self: start;
+  }
+}
+
+.link {
+  color: #717171;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.busca {
+  align-items: center;
+  display: flex;
+  grid-area: busca;
+  width: 100%;
+}
+
+.selected {
+  color: red;
+}
+
+.icones {
+  display: flex;
+  gap: 20px;
+  grid-area: icones;
+  margin-left: 30px;
+}

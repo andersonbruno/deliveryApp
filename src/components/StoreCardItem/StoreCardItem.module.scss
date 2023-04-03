@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.image {
+    img {
+        width: 48px;
+        height: 48px;
+        border-radius: 30px;
+    }
+}
+
+.note {
+    color: #fcbb00;
+    font-weight: bold;
+}
+
+.infos {
+    padding: 0 10px 0 10px;
+    color: #717171;
+    font-size: 14px;
+}
+
+.info {
+    padding: 2.5px 0 2.5px 0;
+    display: flex;
+}
+
+.title {
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+.star {
+    font-size: 17px;
+    margin: 0 3px 0 0;
+}
+
+.category {
+    margin: 0 5px 0 5px;
+    font-size: 14px;
+    color: #717171;
+}

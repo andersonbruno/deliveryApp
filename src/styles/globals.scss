@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  margin: 0px;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+  border: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

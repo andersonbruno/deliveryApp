@@ -1,0 +1,46 @@
+.header {
+    padding: 20px 150px 20px 150px;
+
+    span {
+        color: red;
+    }
+}
+
+.search-nav {
+    border-bottom: 1px solid #f5f0eb;
+    margin: 10px 0 10px 0;
+}
+
+.search-button {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 18px;
+    color: #a6a29f;
+    cursor: pointer;
+}
+
+.search-button-selected{
+    border-bottom: 2px solid red;
+    border-bottom-color: currentcolor;
+    color: #ea1d2c;
+}
+
+.items-card {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.result {
+    padding: 10px;
+    color: #3e3e3e;
+}
+
+.stores {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
