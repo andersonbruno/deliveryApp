@@ -6,7 +6,8 @@ import classNames from 'classnames';
 import { useDispatch } from 'react-redux';
 import { closeModal } from '../../store/reducers/modal';
 import Image, { StaticImageData } from 'next/image';
-//import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import { addItem } from '../../store/reducers/bag';
 
 interface IModalProps {
     itemId: number;
@@ -23,12 +24,17 @@ interface IModalProps {
 export default function Modal ({ itemId, itemName, itemDescription, itemPrice, itemImage, storeId, storeName, storeNote, storeTimeToDeliver } : IModalProps) {
     const [ quantity, setQuantity ] = useState(1);
     const dispatch = useDispatch();
-    //const navigate = useNavigate();
+    const { push } = useRouter();
 
     function redirectToStore(id: number): void {
         dispatch(closeModal());
-        //navigate('/store/' + storeId);
+        push('/store/' + id);
     } 
+
+    function addItemToBag() {
+        dispatch(addItem({comment: '', itemId, quantity, storeId}));
+        dispatch(closeModal());
+    }
 
     return (
         <div className={classNames(styles.modal, styles.modalOpened)}>
@@ -79,7 +85,7 @@ export default function Modal ({ itemId, itemName, itemDescription, itemPrice, i
                                 </button>
                             </div>
                         </div>
-                        <button className={styles.buttonAdd}>
+                        <button className={styles.buttonAdd} onClick={() => addItemToBag()}>
                             <div className={styles.buttonContent}>
                                 <span>Adicionar</span>
                                 <span>R$ {(itemPrice * quantity).toFixed(2)}</span>

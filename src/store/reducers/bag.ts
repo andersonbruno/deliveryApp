@@ -53,4 +53,6 @@ const bagSlice = createSlice({
     }
 });
 
+export const { clearBag, addItem } = bagSlice.actions;
+
 export default bagSlice.reducer;

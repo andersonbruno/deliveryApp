@@ -1,23 +1,22 @@
 import { useSelector } from 'react-redux';
-//import { Outlet } from 'react-router-dom';
 import Modal from '../Modal';
 import Navbar from '../Navbar';
 import styles from './DefaultPage.module.scss';
 import { RootState } from '../../store';
 
-interface pageProps {
+interface PageProps {
     children: React.ReactElement;
 }
 
-export default function DefaultPage( { children } : pageProps) {
+export default function DefaultPage( { children } : PageProps) {
     const modal = useSelector((state: RootState) => state.modal);
 
     return (
-        <div style={{position:'relative'}}>            
+        <div className={styles.container}>            
             {
                 modal.modalOpened ? <Modal {...modal}/> : <></>
             }
-            <div className={styles.container}>
+            <div className={styles.content}>
                 <Navbar/>
                 <div className={styles.containerOutlet}>
                     {
@@ -25,7 +24,9 @@ export default function DefaultPage( { children } : pageProps) {
                     }
                 </div>
                 <div>
-
+                    {
+                        //footer
+                    }
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { openModal } from '../../store/reducers/modal';
 import styles from './ItemCardStore.module.scss';
 import { useDispatch } from 'react-redux';

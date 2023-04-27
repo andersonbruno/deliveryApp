@@ -45,14 +45,14 @@ const modalSlice = createSlice({
 
             return state = {
                 itemId: idItem,
-                itemName: item?.name || '',
-                itemDescription: item?.description || '',
-                itemPrice: item?.price || 0,
+                itemName: item?.name as string,
+                itemDescription: item?.description as string,
+                itemPrice: item?.price as number,
                 itemImage: item?.image || state.itemImage,
                 storeId: idStore,
-                storeName: store?.name || '',
-                storeNote: store?.note || 0,
-                storeTimeToDeliver: store?.timeToDeliver || 0,
+                storeName: store?.name as string,
+                storeNote: store?.note as number,
+                storeTimeToDeliver: store?.timeToDeliver as number,
                 modalOpened: true
             };
         },
