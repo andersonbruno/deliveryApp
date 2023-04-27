@@ -3,6 +3,12 @@
     padding: 8px 12px;
     border-radius: 200px;  
     cursor: pointer;
+    width: 100%;
+    justify-content: center;
+}
+
+.container:hover{
+    background-color: #F7F7F7;
 }
 
 .icon {
@@ -14,10 +20,13 @@
     font-size: 11px;
     display: block;
     white-space: nowrap;
-    margin: 0 5px;
 }
 
 .bagWithItens {
     background-color: red;
     color: white;
+}
+
+.bagWithItens:hover{
+    background-color: red;
 }

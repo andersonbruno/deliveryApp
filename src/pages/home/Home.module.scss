@@ -7,3 +7,31 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+
+@media(max-width: 1515px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .stores {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 950px) {
+    .stores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 670px) {
+    .stores {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container {
+        padding: 20px;
+    }
+}

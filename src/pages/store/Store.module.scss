@@ -21,6 +21,7 @@
 
 .banner {
     width: 100%;
+    object-fit: cover;
     filter: brightness(0.80);
     border-radius: 5px;
 }
@@ -55,4 +56,16 @@
     align-content: space-around;
     justify-content: space-between;
     grid-gap: 30px;
+}
+
+@media(max-width: 1700px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 1100px) {
+    .items {
+        grid-template-columns: 1fr;
+    }
 }

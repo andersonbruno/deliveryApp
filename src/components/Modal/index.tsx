@@ -66,7 +66,7 @@ export default function Modal ({ itemId, itemName, itemDescription, itemPrice, i
                         </div>
                         <div className={styles.modalStoreComment}>
                             <span>Algum comentário?</span>
-                            <textarea maxLength={140} rows={3}></textarea>
+                            <textarea maxLength={140} rows={3} className={styles.comment}></textarea>
                         </div>
                     </div>
                     <div className={styles.modalAction}>

@@ -104,5 +104,67 @@ export const mockStores = [
                 image: quatropequenos
             }
         ]
+    },
+    {
+        id: 4,
+        name: 'Mcdonalds - Nova Parnamirim',
+        note: 4.4,
+        timeToDeliver: 50,
+        category: 'Lanche',
+        image: mc,
+        items: [
+            {
+                id: 88789897,
+                name: '2 CLÁSSICOS PELO PREÇO DE 1',
+                description: '',
+                price: 23.99,
+                image: doisclassicos
+            },
+            {
+                id: 8878989564,
+                name: 'COMBO DOS CLÁSSICOS',
+                description: '',
+                price: 38.99,
+                image: comboclassico
+            },
+            {
+                id: 8878989743,
+                name: '4 PEQUENOS PREÇOS',
+                description: '',
+                price: 32.99,
+                image: quatropequenos
+            }
+        ]
+    },
+    {
+        id: 5,
+        name: 'Mcdonalds - Nova Parnamirim',
+        note: 4.4,
+        timeToDeliver: 50,
+        category: 'Lanche',
+        image: mc,
+        items: [
+            {
+                id: 88789897,
+                name: '2 CLÁSSICOS PELO PREÇO DE 1',
+                description: '',
+                price: 23.99,
+                image: doisclassicos
+            },
+            {
+                id: 8878989564,
+                name: 'COMBO DOS CLÁSSICOS',
+                description: '',
+                price: 38.99,
+                image: comboclassico
+            },
+            {
+                id: 8878989743,
+                name: '4 PEQUENOS PREÇOS',
+                description: '',
+                price: 32.99,
+                image: quatropequenos
+            }
+        ]
     }
 ]

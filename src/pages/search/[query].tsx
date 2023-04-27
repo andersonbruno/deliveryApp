@@ -95,6 +95,30 @@ export default function Search () {
                                     />)
                                 })
                             }
+                            {
+                                    restaurant.items.map((itemDetail) => {  
+                                    return (<ItemCard 
+                                        idItem={itemDetail.id}
+                                        idStore={restaurant.id}
+                                        name={itemDetail.name}
+                                        image={itemDetail.image}
+                                        price={itemDetail.price}
+                                        key={itemDetail.id}
+                                    />)
+                                })
+                            }
+                            {
+                                    restaurant.items.map((itemDetail) => {  
+                                    return (<ItemCard 
+                                        idItem={itemDetail.id}
+                                        idStore={restaurant.id}
+                                        name={itemDetail.name}
+                                        image={itemDetail.image}
+                                        price={itemDetail.price}
+                                        key={itemDetail.id}
+                                    />)
+                                })
+                            }
                         </div>
                     </div>
                 )

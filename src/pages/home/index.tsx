@@ -22,6 +22,19 @@ export default function Home () {
                             />
                         })
                     }
+                    {
+                        mockStores.map((store) => {
+                            return <StoreCard 
+                                name={store.name}
+                                note={store.note}
+                                timeToDeliver={store.timeToDeliver} 
+                                category={store.category} 
+                                image={store.image}
+                                id={store.id}
+                                key={store.id}
+                            />
+                        })
+                    }
                 </div>
             </div>
         </DefaultPage>
