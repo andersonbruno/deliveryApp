@@ -26,11 +26,11 @@ export default function Store ({ store } : IProps) {
                         <Image className={styles.banner} src={banner} alt='banner'/>
                     </div>
                     <div className={styles.info}>
-                        <div className={styles['container-logo']}>
+                        <div className={styles.containerLogo}>
                             <Image className={styles.logo} src={store.image} alt={'Logo loja'}/>
                         </div>
                         <div className={styles.title}>
-                            <h1>{store?.name} <span><AiFillStar/> {store.note}</span></h1>
+                            <h1>{store?.name} <span><AiFillStar/> {store.note.toFixed(1)}</span></h1>
                         </div>
                     </div>
                     <h2>Produtos</h2>

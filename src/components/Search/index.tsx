@@ -15,7 +15,7 @@ export default function Search() {
     }
 
     return (
-        <div className={styles['container-input']}>
+        <div className={styles.containerInput}>
             <RiSearchLine className={styles.icon}/>
             <input 
                 placeholder="Busque por um produto ou loja"

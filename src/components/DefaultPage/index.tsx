@@ -5,11 +5,11 @@ import Navbar from '../Navbar';
 import styles from './DefaultPage.module.scss';
 import { RootState } from '../../store';
 
-interface props {
+interface pageProps {
     children: React.ReactElement;
 }
 
-export default function DefaultPage( { children } : props) {
+export default function DefaultPage( { children } : pageProps) {
     const modal = useSelector((state: RootState) => state.modal);
 
     return (
@@ -19,7 +19,7 @@ export default function DefaultPage( { children } : props) {
             }
             <div className={styles.container}>
                 <Navbar/>
-                <div className={styles['container-outlet']}>
+                <div className={styles.containerOutlet}>
                     {
                         children
                     }

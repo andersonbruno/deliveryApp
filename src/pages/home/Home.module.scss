@@ -1,24 +1,9 @@
-.header {
-    padding: 20px 150px 20px 150px;
+.container {
+    padding: 20px 200px 20px 200px;
 }
 
 .stores {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-}
-
-.items-card {
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-}
-
-.items {
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-content: space-around;
-    justify-content: space-between;
-    grid-gap: 30px;
 }

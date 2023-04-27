@@ -3,12 +3,11 @@ import Busca from '../Search';
 import Carrinho from '../Bag';
 import styles from './Navbar.module.scss';
 import classnames from 'classnames';
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
-    const location = {
-        pathname: 'something'
-    };
-    
+    const { asPath: location } = useRouter();
+
     return (
         <div className={styles.nav}>
             <div className={styles.logo}>
@@ -16,7 +15,7 @@ export default function Navbar() {
             </div>
             <div className={styles.links}>
                 <Link href='/' className={classnames(styles.link, {
-                    [styles.selected]: location.pathname === '/' || location.pathname.includes('/search/')
+                    [styles.selected]: location === '/' || location.includes('/search/')
                 })}>
                     Início
                 </Link>

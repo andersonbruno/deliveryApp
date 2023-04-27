@@ -7,7 +7,7 @@
     z-index: 2;
 }
 
-.modal-opened {
+.modalOpened {
     display: block;
 }
 
@@ -27,37 +27,37 @@
     font-size: 14px;
 }
 
-.modal-image {
+.modalImage {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .produc-image {
+    .productImage {
         width: 80%;
         height: auto;
     }
 }
 
-.modal-infos {
+.modalInfos {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.modal-header {
+.modalHeader {
     display: flex;
     padding: 10px;
 }
 
-.modal-title {
+.modalTitle {
     flex: 15;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.modal-close {
+.modalClose {
     flex: 1;
     font-size: 28px;
     color: #717171;
@@ -66,30 +66,30 @@
     transition: 0.2s;
 }
 
-.modal-close:hover{
+.modalClose:hover{
     color: #3E3E3E;
 }
 
-.modal-content {
+.modalContent {
     flex: 1;
     margin-left: 40px;
     margin-right: 40px;
 }
 
-.modal-description {
+.modalDescription {
     flex: 1;
     color: #717171;
     margin: 10px 0 10px 0;
     font-weight: lighter;
 }
 
-.modal-price {
+.modalPrice {
     flex: 1;
     color: #3e3e3e;
     margin: 10px 0 10px 0;
 }
 
-.modal-store {
+.modalStore {
     flex: 1;
     border: 1px solid rgba(63,62,62,.1);
     border-radius: 4px;
@@ -99,19 +99,19 @@
     cursor: pointer;
 }
 
-.modal-store {
+.modalStore {
     display: block;
     padding: 15px;
     font-size: 12px;
 }
 
-.modal-store-header {
+.modalStoreHeader {
     flex: 1;
     display: flex;
     justify-content: space-between;
 }
 
-.modal-store-name {
+.modalStoreName {
     display: flex;
     align-items: center;
     
@@ -121,7 +121,7 @@
     }
 }
 
-.modal-store-note {
+.modalStoreNote {
     color: #fcbb00;
     font-weight: bold;
     display: flex;
@@ -133,7 +133,7 @@
     }
 }
 
-.modal-store-price {
+.modalStorePrice {
     span {
         margin: 0 3px 0 3px;
         font-weight: bold;
@@ -141,7 +141,7 @@
     }
 }
 
-.modal-store-comment {
+.modalStoreComment {
     display: flex;
     flex-direction: column;
 
@@ -171,14 +171,14 @@
     margin: 8px 0;
 }
 
-.modal-action {
+.modalAction {
     border: none;
     border-top: 2px solid #f5f0eb;
     padding: 15px;
     display: flex;
     justify-content: flex-end;
 
-    .button-add {
+    .buttonAdd {
         flex: 0.4;
         background-color: #ea1d2c;
         color: #FFF;
@@ -191,12 +191,12 @@
         cursor: pointer;
     }
 
-    .button-content {
+    .buttonContent {
         display: flex;
         justify-content: space-between;
     }
 
-    .quantity-content {
+    .quantityContent {
         flex: 0.2;
         display: flex;
         border: 1px solid #dcdcdc;
@@ -221,12 +221,12 @@
             font-size: 20px;
         }
 
-        .quantity-button {
+        .quantityButton {
             cursor: pointer;
             color: #ea1d2c;
         }
 
-        .quantity-button-not-allow {
+        .quantityButtonNotAllow {
             cursor: not-allowed;
             opacity: 0.4;
         }

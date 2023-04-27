@@ -6,7 +6,7 @@ import DefaultPage from "@/components/DefaultPage";
 export default function Home () {
     return (
         <DefaultPage>
-            <div className={styles.header}>
+            <div className={styles.container}>
                 <h3>Lojas</h3>
                 <div className={styles.stores}>
                     {

@@ -82,7 +82,7 @@ export default function Search () {
                             category={restaurant.category}
                             image={restaurant.image}
                         />
-                        <div className={styles['items-card']}>
+                        <div className={styles.itemsCard}>
                             {
                                     restaurant.items.map((itemDetail) => {  
                                     return (<ItemCard 
@@ -106,9 +106,9 @@ export default function Search () {
         <DefaultPage>
             <div className={styles.header}>
                 <h2>Buscando por <span>{result}</span></h2>
-                <div className={styles['search-nav']}>
-                    <button className={classNames(styles['search-button'], { [styles['search-button-selected']]: tab === Store.Tab1 })} onClick={() => setTab(Store.Tab1)}>Lojas</button>
-                    <button className={classNames(styles['search-button'], { [styles['search-button-selected']]: tab === Store.Tab2 })} onClick={() => setTab(Store.Tab2)}>Itens</button>
+                <div className={styles.searchNav}>
+                    <button className={classNames(styles.searchButton, { [styles.searchButtonSelected]: tab === Store.Tab1 })} onClick={() => setTab(Store.Tab1)}>Lojas</button>
+                    <button className={classNames(styles.searchButton, { [styles.searchButtonSelected]: tab === Store.Tab2 })} onClick={() => setTab(Store.Tab2)}>Itens</button>
                 </div>
                 <div>
                 {SelectedTab[tab]}
