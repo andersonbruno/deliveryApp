@@ -23,6 +23,7 @@ interface IModalProps {
 
 export default function Modal ({ itemId, itemName, itemDescription, itemPrice, itemImage, storeId, storeName, storeNote, storeTimeToDeliver } : IModalProps) {
     const [ quantity, setQuantity ] = useState(1);
+    const [ comment, setComment ] = useState('');
     const dispatch = useDispatch();
     const { push } = useRouter();
 
@@ -32,7 +33,7 @@ export default function Modal ({ itemId, itemName, itemDescription, itemPrice, i
     } 
 
     function addItemToBag() {
-        dispatch(addItem({comment: '', itemId, quantity, storeId}));
+        dispatch(addItem({comment, itemId, quantity, storeId}));
         dispatch(closeModal());
     }
 
@@ -66,7 +67,7 @@ export default function Modal ({ itemId, itemName, itemDescription, itemPrice, i
                         </div>
                         <div className={styles.modalStoreComment}>
                             <span>Algum comentário?</span>
-                            <textarea maxLength={140} rows={3} className={styles.comment}></textarea>
+                            <textarea maxLength={140} rows={3} className={styles.comment} onChange={(e) => setComment(e.target.value)}></textarea>
                         </div>
                     </div>
                     <div className={styles.modalAction}>

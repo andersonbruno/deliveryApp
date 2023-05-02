@@ -23,8 +23,7 @@ $mobile-sm: 670px;
 
   .bag {
     width: 100%;
-    gap: 0px;
-    margin-left: 0px;
+    margin-left: 0px !important;
     margin-bottom: 6px;
   }
 }
@@ -76,4 +75,5 @@ $mobile-sm: 670px;
   flex: 0.1;
   display: flex;
   height: 100%;
+  margin-left: 10px;
 }
