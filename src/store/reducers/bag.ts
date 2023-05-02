@@ -14,7 +14,7 @@ interface IBag {
     items: IItems[]
 }
 
-interface IPayload {
+interface ItemPayload {
     storeId: number,
     itemId: number,
     quantity: number;
@@ -33,26 +33,34 @@ const bagSlice = createSlice({
     initialState,
     reducers: {
         clearBag: () => initialState,
-        addItem: (state, action: PayloadAction<IPayload>) => {
+        setBag: (state, action: PayloadAction<IBag>) => {
+            return state = action.payload;
+        },
+        addItem: (state, action: PayloadAction<ItemPayload>) => {
             const { itemId, storeId, quantity, comment } = action.payload;
             const store = mockStores.find(store => store.id === storeId);
             if(!store) return state;
             const item = store.items.find(item => item.id === itemId);
             if(!item) return state;
 
-            const newTotalPrice = state.TotalPrice + (item.price * quantity);
-            const newTotalItems = state.TotalItems + (quantity);
+            const newTotalPrice = state.storeId == storeId ? state.TotalPrice + (item.price * quantity) : (item.price * quantity);
+            const newTotalItems = state.storeId == storeId ? state.TotalItems + (quantity) : quantity;
+            const newItems = state.storeId == storeId ? [...state.items, {itemId: item.id, quantity, comment}] : [{itemId: item.id, quantity, comment}];
 
-            return state = { 
+            const newState = { 
                 storeId: store?.id || 0,
                 TotalItems: newTotalItems,
                 TotalPrice: newTotalPrice,
-                items: [...state.items, {itemId: item.id, quantity, comment}]
+                items: newItems
             };
+
+            localStorage.setItem('bag', JSON.stringify(newState));
+
+            return state = newState;
         }
     }
 });
 
-export const { clearBag, addItem } = bagSlice.actions;
+export const { clearBag, addItem, setBag } = bagSlice.actions;
 
 export default bagSlice.reducer;
