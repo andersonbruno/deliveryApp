@@ -1,0 +1,138 @@
+.content {
+    position: fixed;
+    width: 500px;
+    height: calc(100vh - 80px);
+    z-index: 4;
+    bottom: 0px;
+    right: 0px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+    
+    hr {
+        height: .7px;
+        background-color: #ccc;
+        border: none;
+        margin-bottom: 20px;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.header {
+    margin: 20px 30px;
+    flex: 1;
+
+    span {
+        color: #717171;
+        font-weight: 300;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    h3 {
+        margin: 8px 0 0;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.itemsList {
+    margin: 0px 30px;
+}
+
+.itemsListHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.titleHeader {
+  flex:1;
+}
+
+
+.itemsListDescription {
+    color: #717171;
+    font-weight: 300;
+    font-size: 14px;
+    margin: 10px 0px;
+}
+
+.removeButton {
+    cursor: pointer;
+    font-weight: 600;
+    color: #ea1d2c;
+    font-size: 14px;
+}
+
+.info {
+    display: block;
+    margin: 20px 30px;
+    font-size: 15px;
+    font-weight: 100;
+    color: #717171;
+    flex: 10;
+
+    .subtotal {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0px;
+    }
+
+    .entrega {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0px;
+    }
+}
+
+.footer {
+    flex: 1;
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: column;
+
+    .total {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    button {
+        flex: 0.4;
+        background-color: #ea1d2c;
+        color: #FFF;
+        border: none;
+        border-radius: 4px;
+        padding: 15px 25px;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+}
+
+.emptyBag {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.emptyBagIcon {
+    font-size: 90px;
+}

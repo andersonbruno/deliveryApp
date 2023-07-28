@@ -14,7 +14,7 @@ import quatropequenos from '../assets/itens/4pequenos.png';
 export const mockStores = [
     {
         id: 1,
-        name: 'Churrascaria do arnaldo',
+        name: 'Churrascaria do Arnaldo',
         note: 5.0,
         timeToDeliver: 30,
         category: 'Brasileira',
@@ -22,7 +22,7 @@ export const mockStores = [
         items: [
             {
                 id: 321321,
-                name: 'Combo mistão (serve 4 pessoas) + Guaraná 2litros',
+                name: 'Combo mistão',
                 description: 'Carne, frango e linguiça. Acompanha arroz de leite, feijão verde, farofa, Vinagrete, macaxeira cozida, macarrão, pirão de queijo.',
                 price: 138.00,
                 image: churrasco
