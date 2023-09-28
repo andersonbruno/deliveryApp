@@ -22,9 +22,6 @@ export default function Store ({ store } : IProps) {
         return (
             <DefaultPage>
                 <div className={styles.container}>
-                    <div>
-                        <Image className={styles.banner} src={banner} alt='banner'/>
-                    </div>
                     <div className={styles.info}>
                         <div className={styles.containerLogo}>
                             <Image className={styles.logo} src={store.image} alt={'Logo loja'}/>

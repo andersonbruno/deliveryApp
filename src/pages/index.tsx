@@ -1,5 +1,11 @@
 import Home from './home';
+import Head from 'next/head';
 
 export default function Index() {
-  return <Home/>
+  return <>
+    <Head>
+      <title>Delivery</title>
+    </Head>
+    <Home/>
+  </>
 }

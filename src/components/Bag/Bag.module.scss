@@ -8,7 +8,7 @@
 }
 
 .container:hover{
-    background-color: #F7F7F7;
+    background-color: var(--grey);
 }
 
 .icon {
@@ -23,10 +23,10 @@
 }
 
 .bagWithItens {
-    background-color: red;
+    background-color: var(--purple);
     color: white;
 }
 
 .bagWithItens:hover{
-    background-color: red;
+    background-color: var(--purple);
 }

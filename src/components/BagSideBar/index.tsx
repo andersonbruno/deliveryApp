@@ -3,14 +3,10 @@ import styles from './BagSideBar.module.scss';
 import classNames from 'classnames';
 import { RootState } from '@/store';
 import { removeItem, clearBag } from '../../store/reducers/bag';
-import { RiHandbagLine } from "react-icons/ri";
 
-interface BagProps {
-    isVisible: boolean;
-}
-
-export default function BagSideBar({ isVisible } : BagProps) {
+export default function BagSideBar() {
     const bag = useSelector((state: RootState) => state.bag);
+    const { status } = useSelector((state: RootState) => state.bagSideBar);
     const dispatch = useDispatch();
 
     const { TotalPrice, items, storeName } = bag;
@@ -25,7 +21,7 @@ export default function BagSideBar({ isVisible } : BagProps) {
 
     return (
         <div className={classNames(styles.content, {
-            [styles.hide]: !isVisible
+            [styles.hide]: status
         }) }>
             {
                 items.length != 0 ? (

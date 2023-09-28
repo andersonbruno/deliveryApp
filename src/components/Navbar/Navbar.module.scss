@@ -43,7 +43,7 @@
 
 .logo {
   cursor: pointer;
-  color: red;
+  color: var(--purple);
   font-weight: bold;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .selected {
-  color: red;
+  color: var(--purple);
 }
 
 .bag {

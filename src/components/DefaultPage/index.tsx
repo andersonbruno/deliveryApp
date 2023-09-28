@@ -5,6 +5,7 @@ import styles from './DefaultPage.module.scss';
 import { RootState } from '../../store';
 import { useEffect } from 'react';
 import { setBag } from '@/store/reducers/bag';
+import BagSideBar from '../BagSideBar';
 
 interface PageProps {
     children: React.ReactElement;
@@ -26,6 +27,7 @@ export default function DefaultPage( { children } : PageProps) {
             {
                 modal.modalOpened ? <Modal {...modal}/> : <></>
             }
+            <BagSideBar/>
             <div className={styles.content}>
                 <Navbar/>
                 <div className={styles.containerOutlet}>

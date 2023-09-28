@@ -23,10 +23,42 @@
     border-radius: 4px;
     display: flex;
     font-size: 14px;
-    //width: 1200px;
-    //height: 580px;
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 75%;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    padding: 25px;
+    border-bottom: 1px solid rgb(230, 235, 241);
+    display: flex;
+
+    span {
+        flex: 10;
+        font-family: 'Nunito';
+        font-size: 24px;
+        font-weight: 800;
+    }
+
+    div {
+        flex: 0.1;
+    }
+}
+
+.body {
+    display: flex;
+    flex-grow: 2;
+}
+
+@media(max-width: 950px) {
+    .body {
+        flex-direction: column;
+    }
+
+    .modalImage, .modalImage {
+        padding: 30px;
+    }
 }
 
 .modalImage {
@@ -146,6 +178,7 @@
 .modalStoreComment {
     display: flex;
     flex-direction: column;
+    padding-bottom: 10px;
 
     span {
         color:#717171;
@@ -181,8 +214,8 @@
     justify-content: flex-end;
 
     .buttonAdd {
-        flex: 0.4;
-        background-color: #ea1d2c;
+        flex: 0.2;
+        background-color: var(--purple);
         color: #FFF;
         border: none;
         border-radius: 4px;
@@ -224,7 +257,7 @@
 
         .quantityButton {
             cursor: pointer;
-            color: #ea1d2c;
+            color: var(--purple);
         }
 
         .quantityButtonNotAllow {
@@ -249,6 +282,23 @@
         .buttonAdd {
             flex: 2;
         }
+    }
+}
+
+@media(max-width: 950px) {
+    .content {
+        width: 95%;
+        height: 95%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .comment {
+        margin-bottom: 15px;
+    }
+
+    .productImage {
+        max-width: 450px;
     }
 }
 
