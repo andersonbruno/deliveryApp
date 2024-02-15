@@ -3,6 +3,8 @@ import styles from './BagSideBar.module.scss';
 import classNames from 'classnames';
 import { RootState } from '@/store';
 import { removeItem, clearBag } from '../../store/reducers/bag';
+import { RiCloseLine } from 'react-icons/ri';
+import { toggle } from "@/store/reducers/bagSideBar";
 
 export default function BagSideBar() {
     const bag = useSelector((state: RootState) => state.bag);
@@ -23,6 +25,9 @@ export default function BagSideBar() {
         <div className={classNames(styles.content, {
             [styles.hide]: status
         }) }>
+            <div className={styles.closeButton}>
+                <RiCloseLine onClick={() => dispatch(toggle())}/>
+            </div>
             {
                 items.length != 0 ? (
                     <>

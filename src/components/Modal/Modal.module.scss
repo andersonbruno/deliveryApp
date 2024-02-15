@@ -29,10 +29,10 @@
 }
 
 .header {
+    display: flex;
     text-align: center;
     padding: 25px;
     border-bottom: 1px solid rgb(230, 235, 241);
-    display: flex;
 
     span {
         flex: 10;
@@ -303,6 +303,7 @@
 }
 
 @media(max-width: 700px) {
+
     .content {
         width: 95%;
         height: 95%;
@@ -310,7 +311,16 @@
         overflow: hidden;
     }
 
+    .header {
+        padding: 5px;
+
+        span {
+            font-size: 16px;
+            padding-top: 6px;
+        }
+    }
+
     .comment {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 }
